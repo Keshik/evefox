@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="loadxmldoc.js"></script>
+</head>
+<body>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<script>
+var b ; 
+var j ;
+if (window.XMLHttpRequest)
+  {
+  xhttp=new XMLHttpRequest();
+  }
+else // for IE 5/6
+  {
+  xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xhttp.open("POST","SkillTree.xml.aspx",false);
+xhttp.send();
+xmlDoc=xhttp.responseXML;
+
+
+x=xmlDoc.getElementsByTagName("eveapi")[0].getElementsByTagName("result")[0].getElementsByTagName('rowset')[0];
+//skillGroups = x.getElementsByTagName('row');
+skillGroups=x.childNodes;
+
+document.write(skillGroups.length);
+for (b= 0 ; b < skillGroups.length ; b++) {
+if (skillGroups.item(b).nodeType == 1) { document.write(skillGroups.item(b).getAttribute("groupName") + "<p>"); 
+	skillRows = skillGroups.item(b).childNodes; 
+	
+	//skillRows = skillGroups.item(b).firstChild.getElementsByTagName("row");
+    //alert(skillRows.length);
+	for (j=0 ; j < skillRows.length ; j++)
+	{
+	    document.write(skillRows.item(j));
+		if (skillRows.item(j).nodeType == 1) {
+			//alert(skillRows.item(j).getElementsByTagName("row").length);
+			document.write("<p>" + skillRows.item(j).nodeName + "<p>");
+			actualSkills=skillRows.item(j).childNodes;
+			document.write(actualSkills.length);
+			for (p = 0; p < actualSkills.length ; p++)
+			{
+				if (actualSkills.item(p).nodeType==1)
+				{
+					document.write(actualSkills.item(p).getAttribute("typeName"));
+				}	
+			}
+		}
+	}
+    document.write("<p>");
+
+}
+}
+
+
+</script>
+</body>
+</html>
+

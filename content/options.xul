@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://evefox/skin/overlay.css" type="text/css" ?>
+<!DOCTYPE prefwindow SYSTEM "chrome://evefox/locale/prefwindow.dtd">
+<prefwindow id="evefoxPreferences" class="options" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;"
+ondialogaccept="window.arguments[0].getCharData();">
+<script src="options.js"/>
+  <prefpane id="pane1" label="&pane1.title;" class="panels">
+    <preferences>
+      <preference id="key" name="extensions.evefox.apikey" type="string"/>
+      <preference id="uid" name="extensions.evefox.userid" type="string"/>
+      <preference id="rrate" name="extensions.evefox.rrate" type="int"/>
+    </preferences>
+    <!--<checkbox id="checkboolpref" preference="boolpref1" label="&checkboolpref.label;" accesskey="&checkboolpref.accesskey;"/>-->
+	<tabbox class="panels">
+  <tabs>
+    <tab label="Character Options"/>
+    <tab label="About"/>
+  </tabs>
+  <tabpanels>
+    <tabpanel id="chartab" class="panels">
+	<vbox>
+		<label flex="1" accesskey="&userid.accesskey;" control="textintpref">&userid.label;</label><textbox class="texts" id="uid" preference="uid"/>
+
+		<label flex="1" accesskey="&apikey.accesskey;" control="textstringpref">&apikey.label;</label><textbox class="texts" id="key" preference="key"/>
+
+	<button flex="1" height="10" oncommand="openLink('http://www.eveonline.com/api/default.asp','tab')" class="buttons" label="Click here to find your API key"/>
+		</vbox>
+			<spacer flex="1"/>
+    </tabpanel>
+    <tabpanel id="abouttab" class="panels">
+      <label value="EVE Fox"/>
+      <label value="A very simple characer monitoring tool"/>
+    </tabpanel>
+  </tabpanels>
+</tabbox>
+
+	
+  </prefpane>
+</prefwindow>

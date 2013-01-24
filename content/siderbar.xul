@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type"text/css" ?>
+<?xml-stylesheet href="chrome://evefox/skin/overlay.css" type="text/css" ?>
+<!DOCTYPE page SYSTEM "chrome://evefox/locale/efsiderbar.dtd">
+
+<page id="evefox_side" title="&evefoxsidebar.label;" class ="sidebar"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
+	<script src="overlay.js"/>
+<!--<toolbox>
+  <toolbar id="nav-toolbar" class="menubar" width="400">
+    <toolbarbutton  class="menubuts" label="Options" oncommand="evefox.showOptionsMenu()"/>
+    <toolbarbutton class="menubuts" label="Refresh" oncommand="evefox.refreshSheet()"/>
+    <toolbarbutton class="menubuts" label="Back to Main" oncommand="evefox.getCharData()"/>
+  </toolbar>
+</toolbox>-->
+
+<hbox>
+    <button  class="menubuts" label="User / Public Key" oncommand="evefox.showOptionsMenu()"/>
+    <button class="menubuts" label="Refresh" oncommand="evefox.refreshSheet()"/>
+    <button class="menubuts" label="Back to Character List" oncommand="evefox.getCharData()"/>
+</hbox>
+	<vbox id ="side_main" flex="1" align="start" style="overflow:auto">
+	<vbox id="portrait"></vbox>
+	<vbox id="skillList"></vbox>
+
+		<!--<button id="but_fetch" icon="help" label="Reload Character Data" oncommand="evefox.getCharData()" /> -->
+	</vbox>
+	<separator class="groove-thin" orient="horizontal"/>
+
+	<vbox id="statuswindow" height = "70">
+	
+	<vbox id ="info" pack="end">
+	<label id = "title" flex="1"/>
+	<label id ="curTrain" value=""/>
+	<label id="eta" value=""/>
+	<label id="timer" value=""/>
+	</vbox>
+	<label id="status" value=""/> <progressmeter  class="progressmeter"  id="loadprog"  hidden="true"  mode="undetermined" height="30" width="200"   />
+	</vbox>
+
+</page>

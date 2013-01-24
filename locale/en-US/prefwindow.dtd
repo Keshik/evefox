@@ -1,0 +1,6 @@
+<!ENTITY prefwindow.title "EVE Fox preferences">
+<!ENTITY pane1.title "EVE Fox preferences">
+<!ENTITY userid.label "User ID       ">
+<!ENTITY userid.accesskey "U">
+<!ENTITY apikey.label "PUBLIC API Key">
+<!ENTITY apikey.accesskey "A">

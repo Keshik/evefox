@@ -1,0 +1,105 @@
+/* This is just an example.  You shouldn't do this. */
+#evefox-hello
+{
+ 
+}
+
+.menubar {
+-moz-appearance: none !important;
+
+color:#7FFF00 !important;
+} 
+
+.menubuts {
+-moz-appearance: none !important;
+background-color: black !important;
+color:#ffffff !important;
+
+}
+
+.menubuts:hover {
+-moz-appearance: none !important;
+background-color: #ffffff!important;
+color:#000000 !important;
+
+}
+.sidebar 
+{
+font-family: sans-serif; color:#ffffff; background:#000000;padding-left:15px;
+ 
+}
+
+.texts
+{
+-moz-appearance: none !important;
+background-color: white ;
+color: black ; 
+}
+.options
+{
+font-family: sans-serif; 
+}
+.panels
+{
+font-family: sans-serif; 
+background-color: white;
+color : black ; 
+}
+.buttons
+{
+
+	color: black ;
+}
+
+.progressmeter
+{
+background-color: grey!important;
+-moz-appearance: none !important; 
+}
+
+.progressmeter .progress-bar 
+{
+-moz-appearance: none !important; 
+background-color : #7FFF00 ;
+}
+
+.counter {
+	color : white; 
+font-size: 10pt;
+font-family:monospace;
+}
+.training {
+ border: 2px solid red;
+
+}
+.currentTrainer{
+	color : #7FFF00;
+    
+	font-size:8pt ; 
+	font-weight:bold ;
+}
+.error{
+	color : #7FFF00 ;
+	font-size:10pt ; 
+	font-weight:bold ;
+}
+.traintitle{
+	font-size:10pt;
+	color:white	; 
+	background-color :grey; 
+}
+.trainer {
+	font-size:10pt ;
+	color:white ; 
+	font-family: sans-serif;  
+}
+.category{
+	font-size:10pt;
+	color:white	; 
+	background-color :grey; 
+}
+.skillname{
+	font-size:8pt;
+	color:white	; 
+}
+.category:hover { color :white ; background:grey; font-weight:bold}

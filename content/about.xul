@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://evefox/locale/about.dtd">
+<dialog title="&about; EVE Fox" orient="vertical" autostretch="always" onload="sizeToContent()" buttons="accept" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<!-- Original template by Jed Brown -->
+<groupbox align="center" orient="horizontal">
+<vbox>
+  <text value="EVE Fox" style="font-weight: bold; font-size: x-large;"/>
+  <text value="&version; 1.1"/>
+  <separator class="thin"/>
+  <text value="&createdBy;" style="font-weight: bold;"/>
+  <text value="Andrew Lake"/>
+  <text value="This addon allows you to track your EVE Character's training and see what skills they have."/>
+  <text value="Please send feedback or comments or suggestions on how to make this addon better to evefox.dev@gmail.com"/>
+  <separator class="thin"/>
+</vbox>
+</groupbox>
+</dialog>

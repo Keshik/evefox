@@ -1,0 +1,4 @@
+content	evefox	content/
+locale	evefox	en-US	locale/en-US/
+skin	evefox	classic/1.0	skin/
+overlay	chrome://browser/content/browser.xul	chrome://evefox/content/firefoxOverlay.xul

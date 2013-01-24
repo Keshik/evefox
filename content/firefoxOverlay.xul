@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://evefox/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://evefox/locale/evefox.dtd">
+<overlay id="evefox-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="evefox-strings" src="chrome://evefox/locale/evefox.properties" />
+  </stringbundleset>
+
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="evefox-hello" label="&evefox.label;" insertafter="javascriptConsole,devToolsSeparator" observes="evefoxSidebar"
+              oncommand="evefox.onMenuItemCommand(event);"/>
+  </menupopup>
+  <!--
+     <keyset id="mainKeyset">
+    <key id="key_openEmptySidebar" command="evefoxSidebar"
+         key="&evefoxsidebar.commandkey;" 
+         modifiers="&evefoxsidebar.modifierskey;" />
+  </keyset>
+  -->
+  <broadcasterset id="mainBroadcasterSet"> 
+    <broadcaster id="evefoxSidebar" 
+                 label="&evefoxsidebar.title;"
+                 autoCheck="false"
+                 type="checkbox"
+                 group="sidebar"
+                 sidebarurl="chrome://evefox/content/siderbar.xul"
+                 sidebartitle="&evefoxsidebar.title;"
+                 oncommand="toggleSidebar('evefoxSidebar');" />
+  </broadcasterset>
+  
+
+</overlay>
